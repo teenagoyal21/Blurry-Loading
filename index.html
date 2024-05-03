@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurry Loading</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="border-box overflow-x-hidden bg-teal-800">
+
+    <!-- Button to have a look on webpage -->
+    <div class="relative top-96 flex justify-center">
+        <button id="startButton" class="z-[2] w-20 h-8 bg-teal-200 rounded-xl font-mono text-teal-800">Look!</button>
+    </div>
+
+    <!-- Image and the Loading text shown -->
+    <div id="twoDivs" class="flex items-center">
+        <div class="flex flex-col w-screen h-screen justify-center items-center bg-teal-800 ml-16">
+            <h2 class="text-3xl text-center font-mono text-gray-200 mb-16">Blurry Loading Effect!</h2>
+            <div id="sourceF" class="w-95 h-95 blur-0">
+                <img id="source" src="asserts/sunset.jpeg" alt="blur image"
+                    class="border rounded border-8 border-gray-300">
+            </div>
+            <span id="loader" class="font-sans text-gray-200 text-7xl absolute top-96">0%</span>
+        </div>
+
+        <div class="flex flex-col items-end">
+            <div class="bg-gray-200 p-2 m-2">
+                <button id="btnImg1"><img id="img1" src="asserts/1.jpg" alt="Image 1" class="h-16 w-16 object-cover blur"></button>
+            </div>
+            <div class="bg-gray-200 p-2 m-2">  
+                <button id="btnImg2"><img id="img2" src="asserts/2.jpg" alt="Image 2" class="h-16 w-16 object-cover blur"></button>
+            </div>
+            <div class="bg-gray-200 p-2 m-2">
+                <button id="btnImg3"><img id="img3" src="asserts/3.jpg" alt="Image 3" class="h-16 w-16 object-cover blur"></button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
